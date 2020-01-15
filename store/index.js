@@ -1,8 +1,20 @@
 export const state = () => ({
   progress: {
-    total: 2,
+    // total: 2,
     checked: 0,
-  }
+  },
+  lists: [
+    {
+      section: 'seo',
+      title: 'XML Sitemap is being generated and is correct',
+      info: ''
+    },
+    {
+      section: 'seo',
+      title: 'Robots.txt (if necessary to hide certain site areas)',
+      info: ''
+    }
+  ]
 })
 
 export const mutations = {
@@ -25,7 +37,7 @@ export const actions = {
 }
 
 export const getters = {
-  percentage: (state) => {
-    return (state.progress.checked / state.progress.total) * 100
-  }
+  percentage: (state, getters) => {
+    return (state.progress.checked / state.lists.length) * 100
+  },
 }

@@ -8,12 +8,9 @@
       <h2 class="subtitle">
         SEO Basics
       </h2>
-      <ul>
-        <li>
-          <Checkbox>XML Sitemap is being generated and is correct</Checkbox>
-        </li>
-        <li>
-          <Checkbox>Robots.txt (if necessary to hide certain site areas)</Checkbox>
+      <ul ref="seo">
+        <li v-for="(item, index) in seo" :key="index">
+          <Checkbox>{{ item.title }}</Checkbox>
         </li>
       </ul>
     </div>
@@ -97,7 +94,17 @@ export default {
   components: {
     Checkbox,
     Progress
-  }
+  },
+  data () {
+    return {
+
+    }
+  },
+  computed: {
+    seo () {
+      return this.$store.state.lists.filter(list => list.section === 'seo')
+    }
+  },
 }
 </script>
 
