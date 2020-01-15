@@ -4,6 +4,7 @@
       <h1 class="title">
         Website Launch Checklist
       </h1>
+      <Progress />
       <h2 class="subtitle">
         SEO Basics
       </h2>
@@ -90,10 +91,12 @@ Post Launch
 <script>
 // import Logo from '~/components/Logo.vue'
 import Checkbox from '~/components/Checkbox'
+import Progress from '~/components/Progress'
 
 export default {
   components: {
-    Checkbox
+    Checkbox,
+    Progress
   }
 }
 </script>
