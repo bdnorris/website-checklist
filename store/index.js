@@ -7,11 +7,21 @@ export const state = () => ({
     {
       section: 'seo',
       title: 'XML Sitemap is being generated and is correct',
-      info: ''
+      info: 'some more info about xml sitemaps'
     },
     {
       section: 'seo',
       title: 'Robots.txt (if necessary to hide certain site areas)',
+      info: 'asdf'
+    },
+    {
+      section: 'seo',
+      title: 'Meta descriptions are included and pertain to the unique page',
+      info: 'asdf'
+    },
+    {
+      section: 'seo',
+      title: 'Page Titles are descriptive, SEO friendly, and unique',
       info: ''
     }
   ]

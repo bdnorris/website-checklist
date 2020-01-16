@@ -1,24 +1,25 @@
 <template>
   <div class="container">
-    <div>
+    <header>
       <h1 class="title">
         Website Launch Checklist
       </h1>
       <Progress />
+    </header>
+    <div>
       <h2 class="subtitle">
         SEO Basics
       </h2>
       <ul ref="seo">
         <li v-for="(item, index) in seo" :key="index">
           <Checkbox>{{ item.title }}</Checkbox>
+          <p>{{ item.info }}</p>
         </li>
       </ul>
     </div>
   <!--
     SEO (the basics)
 
-         Meta descriptions are included and pertain to the unique page
-         Page Titles are descriptive, SEO friendly, and unique
          H1 and H2 tags used appropriately(ideally,one H1 per page)
          Redirects: 301 redirects in place (if this new site is replacing an old one)
     Analytics
@@ -109,11 +110,30 @@ export default {
 </script>
 
 <style>
+h1 {
+  line-height: 1;
+}
+
+header {
+  margin-bottom: 2em;
+  position: sticky;
+  top: 0;
+}
+
+p {
+  font-size: 16px;
+  padding-left: 1.5em;
+  margin-bottom: 2.5em;
+}
+
 .container {
   margin: 0 auto;
   min-height: 100vh;
-  display: flex;
+  max-width: 1024px;
+  padding: 3em 1.5em;
+  /* display: flex;
   justify-content: center;
+  flex-flow: column nowrap; */
   /* align-items: center; */
   /* text-align: center; */
 }

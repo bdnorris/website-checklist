@@ -18,3 +18,21 @@ export default {
   },
 }
 </script>
+
+<style>
+
+.ant-checkbox-wrapper {
+  margin-bottom: 1em;
+}
+
+.ant-checkbox-wrapper + span,
+.ant-checkbox + span {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.ant-checkbox {
+  top: -0.25em;
+}
+
+</style>
