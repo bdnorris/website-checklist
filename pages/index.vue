@@ -17,13 +17,19 @@
         </li>
       </ul>
     </div>
+    <div>
+      <h2 class="subtitle">
+        Analytics
+      </h2>
+      <ul ref="seo">
+        <li v-for="(item, index) in analytics" :key="index">
+          <Checkbox>{{ item.title }}</Checkbox>
+          <p>{{ item.info }}</p>
+        </li>
+      </ul>
+    </div>
   <!--
-    SEO (the basics)
-
-         H1 and H2 tags used appropriately(ideally,one H1 per page)
-         Redirects: 301 redirects in place (if this new site is replacing an old one)
     Analytics
-        GTM Setup and is ready to push to live analytics property
         Live GA filters Marlin IPs or has  a View that filters these IPs
         Site search setup in GA (if needed)
     Domain and SSL issues
@@ -104,6 +110,9 @@ export default {
   computed: {
     seo () {
       return this.$store.state.lists.filter(list => list.section === 'seo')
+    },
+    analytics () {
+      return this.$store.state.lists.filter(list => list.section === 'analytics')
     }
   },
 }
@@ -118,6 +127,9 @@ header {
   margin-bottom: 2em;
   position: sticky;
   top: 0;
+  background-color: white;
+  z-index: 10;
+  padding: 1em 0;
 }
 
 p {

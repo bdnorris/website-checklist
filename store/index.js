@@ -23,7 +23,22 @@ export const state = () => ({
       section: 'seo',
       title: 'Page Titles are descriptive, SEO friendly, and unique',
       info: ''
-    }
+    },
+    {
+      section: 'seo',
+      title: 'Heading tags used appropriately (ideally, one H1 per page)',
+      info: ''
+    },
+    {
+      section: 'seo',
+      title: 'Redirects: 301 redirects in place (if this new site is replacing an old one)',
+      info: ''
+    },
+    {
+      section: 'analytics',
+      title: 'GTM Setup and is ready to push to live analytics property',
+      info: ''
+    },
   ]
 })
 

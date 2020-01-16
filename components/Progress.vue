@@ -11,7 +11,7 @@ export default {
   name: 'Progress',
   computed: {
     percent () {
-      return this.$store.getters.percentage
+      return Math.round(this.$store.getters.percentage)
     }
   },
 }
