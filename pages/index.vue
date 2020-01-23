@@ -28,12 +28,21 @@
         </li>
       </ul>
     </div>
+    <div>
+      <h2 class="subtitle">
+        Domains and SSL
+      </h2>
+      <ul ref="seo">
+        <li v-for="(item, index) in domains" :key="index">
+          <Checkbox>{{ item.title }}</Checkbox>
+          <p>{{ item.info }}</p>
+        </li>
+      </ul>
+    </div>
   <!--
     Analytics
-        Live GA filters Marlin IPs or has  a View that filters these IPs
-        Site search setup in GA (if needed)
+
     Domain and SSL issues
-        www and non-www both work
         SSL works in production and staging and there are no non-HTTPS references (no mixed-content errors)
     User Experience
         Empty states for all interactive items that could return no results
@@ -113,6 +122,9 @@ export default {
     },
     analytics () {
       return this.$store.state.lists.filter(list => list.section === 'analytics')
+    },
+    domains () {
+      return this.$store.state.lists.filter(list => list.section === 'domains')
     }
   },
 }

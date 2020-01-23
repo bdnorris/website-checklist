@@ -39,6 +39,21 @@ export const state = () => ({
       title: 'GTM Setup and is ready to push to live analytics property',
       info: ''
     },
+    {
+      section: 'analytics',
+      title: 'Live GA filters Marlin IPs or has  a View that filters these IPs',
+      info: ''
+    },
+    {
+      section: 'analytics',
+      title: 'Site search setup in GA (if needed)',
+      info: ''
+    },
+    {
+      section: 'domains',
+      title: 'www and non-www both work, and one forwards to the other',
+      info: 'both www and no www should work, and one should forward to the other to avoid duplicate content issues with SEO'
+    }
   ]
 })
 
