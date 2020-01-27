@@ -1,8 +1,5 @@
 export const state = () => ({
-  site: 'default',
-  progress: {
-    // total: 2,
-  },
+  siteName: '...',
   lists: [
     {
       index: 0,
@@ -87,12 +84,27 @@ export const mutations = {
   // },
   changeCheck (state, payload) {
     state.lists[payload.index].checked = payload.checked
+  },
+  changeSiteName (state, payload) {
+    state.siteName = payload
+  },
+  resetData (state) {
+    state.siteName = '...'
+    state.lists.map((l) => {
+      l.checked = false
+    })
   }
 }
 
 export const actions = {
   check (context, payload) {
     context.commit('changeCheck', payload)
+  },
+  siteName (context, payload) {
+    context.commit('changeSiteName', payload)
+  },
+  reset (context) {
+    context.commit('resetData')
   }
 }
 

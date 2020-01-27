@@ -2,8 +2,12 @@
   <div class="container">
     <header>
       <h1 class="title">
-        Website Launch Checklist
+        Website Launch Checklist for {{ this.$store.state.siteName }}
       </h1>
+      <a-input @change="commitSiteName" v-model="siteName" size="large" placeholder="For Site..." />
+      <a-button @click="resetData" type="primary">
+        Reset Data
+      </a-button>
       <Progress />
     </header>
     <div>
@@ -128,7 +132,7 @@ export default {
   },
   data () {
     return {
-
+      siteName: ''
     }
   },
   computed: {
@@ -140,6 +144,14 @@ export default {
     },
     domains () {
       return this.$store.state.lists.filter(list => list.section === 'domains')
+    }
+  },
+  methods: {
+    commitSiteName (e) {
+      this.$store.dispatch('siteName', this.siteName)
+    },
+    resetData () {
+      this.$store.dispatch('reset')
     }
   },
 }
