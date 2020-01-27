@@ -1,18 +1,28 @@
 <template>
-  <a-checkbox @change="onChange">
+  <a-checkbox :checked="checked" @change="onChange" :data-index="index">
     <slot />
   </a-checkbox>
 </template>
 <script>
 export default {
+  props: {
+    index: {
+      type: Number,
+      default: 0
+    },
+    checked: {
+      type: Boolean,
+      default: false
+    }
+  },
   methods: {
     onChange (e) {
       console.log(`checked = ${e.target.checked}`)
       if (e.target.checked) {
         console.log(e.target)
-        this.$store.dispatch('add')
+        this.$store.dispatch('check', { checked: true, index: this.index })
       } else {
-        this.$store.dispatch('remove')
+        this.$store.dispatch('check', { checked: false, index: this.index })
       }
     },
   },

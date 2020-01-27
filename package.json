@@ -12,8 +12,9 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "ant-design-vue": "^1.1.10",
     "nuxt": "^2.0.0",
-    "ant-design-vue": "^1.1.10"
+    "vuex-persist": "^2.2.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",

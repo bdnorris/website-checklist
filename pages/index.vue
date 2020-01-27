@@ -12,7 +12,12 @@
       </h2>
       <ul ref="seo">
         <li v-for="(item, index) in seo" :key="index">
-          <Checkbox>{{ item.title }}</Checkbox>
+          <Checkbox
+            :index="item.index"
+            :checked="item.checked"
+          >
+            {{ item.title }}
+          </Checkbox>
           <p>{{ item.info }}</p>
         </li>
       </ul>
@@ -23,7 +28,12 @@
       </h2>
       <ul ref="seo">
         <li v-for="(item, index) in analytics" :key="index">
-          <Checkbox>{{ item.title }}</Checkbox>
+          <Checkbox
+            :index="item.index"
+            :checked="item.checked"
+          >
+            {{ item.title }}
+          </Checkbox>
           <p>{{ item.info }}</p>
         </li>
       </ul>
@@ -34,7 +44,12 @@
       </h2>
       <ul ref="seo">
         <li v-for="(item, index) in domains" :key="index">
-          <Checkbox>{{ item.title }}</Checkbox>
+          <Checkbox
+            :index="item.index"
+            :checked="item.checked"
+          >
+            {{ item.title }}
+          </Checkbox>
           <p>{{ item.info }}</p>
         </li>
       </ul>
