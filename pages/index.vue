@@ -2,7 +2,7 @@
   <div class="container">
     <header>
       <h1 class="title">
-        Website Launch Checklist for {{ this.$store.state.siteName }}
+        Website Launch Checklist for <strong>{{ this.$store.state.siteName }}</strong>
       </h1>
       <a-input @change="commitSiteName" v-model="siteName" size="large" placeholder="For Site..." />
       <a-button @click="resetData" type="primary">
@@ -58,17 +58,40 @@
         </li>
       </ul>
     </div>
+    <div>
+      <h2 class="subtitle">
+        User Experience
+      </h2>
+      <ul ref="seo">
+        <li v-for="(item, index) in ux" :key="index">
+          <Checkbox
+            :index="item.index"
+            :checked="item.checked"
+          >
+            {{ item.title }}
+          </Checkbox>
+          <p>{{ item.info }}</p>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="subtitle">
+        Performance
+      </h2>
+      <ul ref="seo">
+        <li v-for="(item, index) in performance" :key="index">
+          <Checkbox
+            :index="item.index"
+            :checked="item.checked"
+          >
+            {{ item.title }}
+          </Checkbox>
+          <p>{{ item.info }}</p>
+        </li>
+      </ul>
+    </div>
   <!--
-    Analytics
 
-    Domain and SSL issues
-        SSL works in production and staging and there are no non-HTTPS references (no mixed-content errors)
-    User Experience
-        Empty states for all interactive items that could return no results
-    Front-end performance checks
-        Google Pagespeed Insights
-            Load Speed
-            Mobile Performance
         Ensure only necessary fonts, weights and character sets are installed
         Images reasonably optimized
     Check for broken links (Integrity or Screaming Frog)
@@ -144,7 +167,13 @@ export default {
     },
     domains () {
       return this.$store.state.lists.filter(list => list.section === 'domains')
-    }
+    },
+    ux () {
+      return this.$store.state.lists.filter(list => list.section === 'ux')
+    },
+    performance () {
+      return this.$store.state.lists.filter(list => list.section === 'performance')
+    },
   },
   methods: {
     commitSiteName (e) {

@@ -70,7 +70,28 @@ export const state = () => ({
       title: 'www and non-www both work, and one forwards to the other',
       info: 'both www and no www should work, and one should forward to the other to avoid duplicate content issues with SEO',
       checked: false,
-    }
+    },
+    {
+      index: 10,
+      section: 'domains',
+      title: 'SSL works in production and staging and there are no non-HTTPS references (no mixed-content errors)',
+      info: '',
+      checked: false,
+    },
+    {
+      index: 11,
+      section: 'ux',
+      title: 'Empty states for all interactive items that could return no results',
+      info: '',
+      checked: false,
+    },
+    {
+      index: 12,
+      section: 'performance',
+      title: 'Google Pagespeed Insights, Load Speed, Mobile Performance',
+      info: 'Lighthouse',
+      checked: false,
+    },
   ]
 })
 
