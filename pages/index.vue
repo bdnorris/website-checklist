@@ -10,91 +10,22 @@
       </a-button>
       <Progress />
     </header>
-    <div>
-      <h2 class="subtitle">
-        SEO Basics
-      </h2>
-      <ul ref="seo">
-        <li v-for="(item, index) in seo" :key="index">
-          <Checkbox
-            :index="item.index"
-            :checked="item.checked"
-          >
-            {{ item.title }}
-          </Checkbox>
-          <p>{{ item.info }}</p>
-        </li>
-      </ul>
-    </div>
-    <div>
-      <h2 class="subtitle">
-        Analytics
-      </h2>
-      <ul ref="seo">
-        <li v-for="(item, index) in analytics" :key="index">
-          <Checkbox
-            :index="item.index"
-            :checked="item.checked"
-          >
-            {{ item.title }}
-          </Checkbox>
-          <p>{{ item.info }}</p>
-        </li>
-      </ul>
-    </div>
-    <div>
-      <h2 class="subtitle">
-        Domains and SSL
-      </h2>
-      <ul ref="seo">
-        <li v-for="(item, index) in domains" :key="index">
-          <Checkbox
-            :index="item.index"
-            :checked="item.checked"
-          >
-            {{ item.title }}
-          </Checkbox>
-          <p>{{ item.info }}</p>
-        </li>
-      </ul>
-    </div>
-    <div>
-      <h2 class="subtitle">
-        User Experience
-      </h2>
-      <ul ref="seo">
-        <li v-for="(item, index) in ux" :key="index">
-          <Checkbox
-            :index="item.index"
-            :checked="item.checked"
-          >
-            {{ item.title }}
-          </Checkbox>
-          <p>{{ item.info }}</p>
-        </li>
-      </ul>
-    </div>
-    <div>
-      <h2 class="subtitle">
-        Performance
-      </h2>
-      <ul ref="seo">
-        <li v-for="(item, index) in performance" :key="index">
-          <Checkbox
-            :index="item.index"
-            :checked="item.checked"
-          >
-            {{ item.title }}
-          </Checkbox>
-          <p>{{ item.info }}</p>
-        </li>
-      </ul>
-    </div>
+    <ListGroup item-key="seo">
+      SEO Basics
+    </ListGroup>
+    <ListGroup item-key="analytics">
+      Analytics
+    </ListGroup>
+    <ListGroup item-key="domains">
+      Domains and SSL
+    </ListGroup>
+    <ListGroup item-key="ux">
+      User Experience
+    </ListGroup>
+    <ListGroup item-key="performance">
+      Performance
+    </ListGroup>
   <!--
-
-        Ensure only necessary fonts, weights and character sets are installed
-        Images reasonably optimized
-    Check for broken links (Integrity or Screaming Frog)
     Browsers
         Two avoid common issues:
             Check in IE11 and current Edge
@@ -144,36 +75,18 @@ Post Launch
 </template>
 
 <script>
-// import Logo from '~/components/Logo.vue'
-import Checkbox from '~/components/Checkbox'
 import Progress from '~/components/Progress'
+import ListGroup from '~/components/ListGroup'
 
 export default {
   components: {
-    Checkbox,
-    Progress
+    Progress,
+    ListGroup
   },
   data () {
     return {
       siteName: ''
     }
-  },
-  computed: {
-    seo () {
-      return this.$store.state.lists.filter(list => list.section === 'seo')
-    },
-    analytics () {
-      return this.$store.state.lists.filter(list => list.section === 'analytics')
-    },
-    domains () {
-      return this.$store.state.lists.filter(list => list.section === 'domains')
-    },
-    ux () {
-      return this.$store.state.lists.filter(list => list.section === 'ux')
-    },
-    performance () {
-      return this.$store.state.lists.filter(list => list.section === 'performance')
-    },
   },
   methods: {
     commitSiteName (e) {
@@ -189,6 +102,7 @@ export default {
 <style>
 h1 {
   line-height: 1;
+  font-size: 4rem !important;
 }
 
 header {

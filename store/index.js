@@ -92,6 +92,27 @@ export const state = () => ({
       info: 'Lighthouse',
       checked: false,
     },
+    {
+      index: 14,
+      section: 'performance',
+      title: 'Ensure only necessary fonts, weights and character sets are installed',
+      info: '',
+      checked: false,
+    },
+    {
+      index: 15,
+      section: 'performance',
+      title: 'Images reasonably optimized',
+      info: 'tinypng, webp, etc.',
+      checked: false,
+    },
+    {
+      index: 16,
+      section: 'performance',
+      title: 'Check for broken links (Integrity or Screaming Frog)',
+      info: 'tinypng, webp, etc.',
+      checked: false,
+    },
   ]
 })
 
