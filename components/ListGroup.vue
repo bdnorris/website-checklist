@@ -11,7 +11,7 @@
         >
           {{ item.title }}
         </Checkbox>
-        <p v-html="item.info" />
+        <div class="content" v-html="item.info" />
       </li>
     </ul>
   </div>
@@ -44,5 +44,13 @@ export default {
 </script>
 
 <style>
-
+  .content > p,
+  .content > a {
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+  }
+  .content > ul {
+    margin-left: 2rem;
+    margin-bottom: 2em;
+  }
 </style>

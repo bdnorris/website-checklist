@@ -25,7 +25,7 @@
       Analytics
     </ListGroup>
     <ListGroup item-key="domains">
-      Domains and SSL
+      Domains, SSL, and Security
     </ListGroup>
     <ListGroup item-key="ux">
       User Experience
