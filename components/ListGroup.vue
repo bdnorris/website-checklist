@@ -6,7 +6,7 @@
     <ul :ref="itemKey">
       <li v-for="(item, index) in items" :key="index">
         <Checkbox
-          :index="item.index"
+          :index="getIndex(item)"
           :checked="item.checked"
         >
           {{ item.title }}
@@ -34,6 +34,11 @@ export default {
     items () {
       return this.$store.state.lists.filter(list => list.section === this.itemKey)
     },
+  },
+  methods: {
+    getIndex (item) {
+      return this.$store.getters.getIndex(item.title)
+    }
   },
 }
 </script>
