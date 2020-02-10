@@ -25,52 +25,27 @@
     <ListGroup item-key="performance">
       Performance
     </ListGroup>
-  <!--
-    Browsers
-        Two avoid common issues:
-            Check in IE11 and current Edge
-            Check in a previous version of iOS
-    Accessibility
-        Site checked with Wave browser tool
-        ARIA attributes added where applicable
-        Image Alt attributes set appropriately
-        All form fields have <label>’s associated
-    Javascript
-        JS Libraries hosted on CDN have fallbacks
-        Console.logs removed
-        No errors in console
-    Forms
-        Server Generated E-mail Working
-            Recipient’s correct
-        Validation in place
-        Submissions can be tracked with analytics
-    Favicons and other device icons
-    Social meta tags (Open Graph, etc.) if necessary
-    Content
-        Check spelling
-        No Placeholder text
-        Privacy Policy and/or Terms of Service
-        If EU, Cookie declaration
-            GDPR?
-        Footer includes up-to-date copywrite
-        Custom 404 Pages
-        Custom 500 Pages (if necessary)
-    Print Stylesheets (if necessary)
-
-Post Launch
-
-    Verify analytics
-    Verify forms
-    Verify server generated e-mails
-    Verify SSL
-    Verify www and non-www
-    Webfonts working
-    Any CDN working
-    CMS
-        CMS login is hidden on production
-    Search Console
-        Google and Bing Search Consoles
-        Link Google Analytics/GTM to Google Search Console -->
+    <ListGroup item-key="browsers">
+      Browsers
+    </ListGroup>
+    <ListGroup item-key="accessibility">
+      Accessibility
+    </ListGroup>
+    <ListGroup item-key="javascript">
+      Javascript
+    </ListGroup>
+    <ListGroup item-key="forms">
+      Forms
+    </ListGroup>
+    <ListGroup item-key="errors">
+      Error Catching
+    </ListGroup>
+    <ListGroup item-key="content">
+      Content
+    </ListGroup>
+    <ListGroup item-key="cms">
+      Content Management System
+    </ListGroup>
   </div>
 </template>
 
