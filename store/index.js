@@ -4,7 +4,7 @@ export const state = () => ({
     {
       section: 'seo',
       title: 'XML Sitemap is being generated and is correct',
-      info: 'some more info about xml sitemaps',
+      info: 'XML Sitemaps help search engines index your entire site, without having to rely on manual crawling. Usually, these can be programatically generated, and we have working examples from Umbraco and Nuxt. Sometimes, you may have to generate it manually, or by using a tool like <a href="https://www.xml-sitemaps.com/">this one</a>. This is especially useful for site rebuilds, since you can get Google\'s index updated much faster by submitting your site to Google search console. Old URLs will be replaced by new ones in Google\'s search index.',
       checked: false,
     },
     {
@@ -316,7 +316,7 @@ export const state = () => ({
     {
       section: 'analytics',
       title: 'Gogle search console and BING if necessary',
-      info: '',
+      info: 'put your sitemap in',
       checked: false,
     },
     {

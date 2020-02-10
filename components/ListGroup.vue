@@ -11,7 +11,7 @@
         >
           {{ item.title }}
         </Checkbox>
-        <p>{{ item.info }}</p>
+        <p v-html="item.info" />
       </li>
     </ul>
   </div>
