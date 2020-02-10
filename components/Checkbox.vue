@@ -1,5 +1,9 @@
 <template>
-  <a-checkbox :checked="checked" @change="onChange" :data-index="index">
+  <a-checkbox
+    :checked="checked"
+    :data-index="index"
+    @change="onChange"
+  >
     <slot />
   </a-checkbox>
 </template>

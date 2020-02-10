@@ -4,8 +4,16 @@
       <h1 class="title">
         Website Launch Checklist for <strong>{{ this.$store.state.siteName }}</strong>
       </h1>
-      <a-input @change="commitSiteName" v-model="siteName" size="large" placeholder="For Site..." />
-      <a-button @click="resetData" type="primary">
+      <a-input
+        v-model="siteName"
+        size="large"
+        placeholder="For Site..."
+        @change="commitSiteName"
+      />
+      <a-button
+        type="primary"
+        @click="resetData"
+      >
         Reset Data
       </a-button>
       <Progress />
