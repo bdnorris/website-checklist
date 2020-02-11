@@ -314,7 +314,7 @@ export const state = () => ({
     },
     {
       section: 'javascript',
-      title: 'JS Libraries hosted on CDN have fallbacks',
+      title: 'JS Libraries hosted on a CDN have fallbacks',
       info: `
         <p>It's usually a good idea if you're pulling in important JS libraries via a CDN, that you provide a local fallback.</p>
         <ul>

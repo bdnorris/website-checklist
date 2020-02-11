@@ -14,7 +14,7 @@
         type="primary"
         @click="resetData"
       >
-        Reset Data
+        Clear All Data
       </a-button>
       <Progress />
     </header>
@@ -153,4 +153,9 @@ ul > li {
 label {
   font-size: 16px;
 }
+
+input[type="text"] {
+  margin-bottom: 1em;
+}
+
 </style>
