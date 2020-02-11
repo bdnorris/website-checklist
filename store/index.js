@@ -5,7 +5,7 @@ export const state = () => ({
       section: 'seo',
       title: 'XML Sitemap is being generated and is correct',
       info: `
-      <p>XML Sitemaps help search engines index your entire site, without having to rely on manual crawling. Usually, these can be programatically generated, and we have working examples from Umbraco and Nuxt. Sometimes, you may have to generate it manually, or by using a tool like <a href="https://www.xml-sitemaps.com/">this one</a>. This is especially useful for site rebuilds, since you can get Google's index updated much faster by submitting your site to Google search console. Old URLs will be replaced by new ones in Google's search index.</p>
+      <p>XML Sitemaps help search engines index your entire site, without having to rely on manual crawling. Usually, these can be programmatically generated, and we have working examples from Umbraco and Nuxt. Sometimes, you may have to generate it manually, or by using a tool like <a href="https://www.xml-sitemaps.com/">this one</a>. This is especially useful for site rebuilds since you can get Google's index updated much faster by submitting your site to Google search console. Old URLs will be replaced by new ones in Google's search index.</p>
       `,
       checked: false,
     },
@@ -78,7 +78,7 @@ export const state = () => ({
       title: 'GTM Setup and is ready to push to live analytics property',
       info: `
         <p>
-          If you have a testing GTM container and a production container, double check that when you launch your site, it will use the production GTM key. Additionally, make sure the production GTM container has been published.
+          If you have a testing GTM container and a production container, double-check that when you launch your site, it will use the production GTM key. Additionally, make sure the production GTM container has been published.
         </p>
       `,
       checked: false,
@@ -93,7 +93,7 @@ export const state = () => ({
     },
     {
       section: 'analytics',
-      title: 'Site search setup in Google Analytics (if needed)',
+      title: 'Site search set up in Google Analytics (if needed)',
       info: `
         <p>If your site uses a query parameter for search terms, you can easily connect this to Google Analytics.</p>
         <ul>
@@ -116,7 +116,7 @@ export const state = () => ({
       section: 'domains',
       title: 'SSL works in staging and there are no non-HTTPS references (no mixed-content errors)',
       info: `
-        <p>So that you can assure there are no issues in production with it's SSL, your staging site should also be secured. Check the console and the network developer tools in your browser to assure there are no SSL related errors.</p>
+        <p>So that you can assure there are no issues in production with its SSL, your staging site should also be secured. Check the console and the network developer tools in your browser to assure there are no SSL related errors.</p>
       `,
       checked: false,
     },
@@ -142,7 +142,7 @@ export const state = () => ({
     },
     {
       section: 'performance',
-      title: 'A performance tool has been run and you\'ve tried to fix any aggregious errors.',
+      title: 'A performance tool has been run and you\'ve tried to fix any egregious errors.',
       info: `
         <p>Items found by these tools may not all be fixable, but make sure you run this test and identify places you can improve your site's performance.</p>
         <ul>
@@ -154,7 +154,7 @@ export const state = () => ({
     },
     {
       section: 'performance',
-      title: 'Only necessary fonts, weights and character sets are installed or requested from a font service',
+      title: 'Only necessary fonts, weights, and character sets are installed or requested from a font service',
       info: `
         <p>When in development, we sometimes install more fonts than we need. Make sure you are only requesting or only have installed font files that are actually used.</p>
       `,
@@ -187,7 +187,7 @@ export const state = () => ({
       section: 'performance',
       title: 'HTML has been validated',
       info: `
-        <p>Run your major template pages through W3Cs HTML Validator to make sure there are no errors that would hurt accessibilty or other parsing issues. A CLI tool may also be an option.</p>
+        <p>Run your major template pages through W3Cs HTML Validator to make sure there are no errors that would hurt accessibility or other parsing issues. A CLI tool may also be an option.</p>
         <ul>
           <li><a href="https://webhint.io/">Webhint Home</a></li>
           <li><a href="https://webhint.io/docs/user-guide/extensions/vscode-webhint/">Webhint for VSCode</a></li>
@@ -200,13 +200,13 @@ export const state = () => ({
       section: 'browsers',
       title: 'Basic functions work in IE11, or IE issues are noted',
       info: `
-        <p>According to the scope of work, your site may need IE11 support, or not. Even if it doesn't, it's good to check basic functionality and layout, and then research any errors so you can estimate fixes, if deemed necessary.</p>
+        <p>According to the scope of work, your site may need IE11 support, or not. Even if it doesn't, it's good to check basic functionality and layout, and then research any errors so you can estimate fixes if deemed necessary.</p>
       `,
       checked: false,
     },
     {
       section: 'browsers',
-      title: 'Site works in a previous version of iOS',
+      title: 'Your site works in a previous version of iOS',
       info: `
         <p>Make sure your site works in the previous version of iOS's Safari browser.</p>
       `,
@@ -216,7 +216,7 @@ export const state = () => ({
       section: 'accessibility',
       title: 'No major issues found via testing with the Axe browser tool or Pa11y',
       info: `
-        <p>Check major pages and templates of the site with the AXE browser tool and fix any errors. This may require further copywriting or design, so make sure to do this early. Whether you need to fix ALL errors or just the worst ones may depend on the scope of work.</p>
+        <p>Check the major pages and templates of the site with the AXE browser tool and fix any errors. This may require further copywriting or design, so make sure to do this early. Whether you need to fix ALL errors or just the worst ones may depend on the scope of work.</p>
         <ul>
           <li><a href="https://www.deque.com/axe/">Axe</a></li>
           <li><a href="https://pa11y.org/">Pa11y</a></li>
@@ -269,7 +269,7 @@ export const state = () => ({
       section: 'accessibility',
       title: 'The <html> tag has a language set',
       info: `
-        <p>The html tag should have an appropriate language set, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang">according to the specifications</a>.</p>
+        <p>The HTML tag should have an appropriate language set, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang">according to the specifications</a>.</p>
       `,
       checked: false,
     },
@@ -283,7 +283,7 @@ export const state = () => ({
     },
     {
       section: 'accessibility',
-      title: 'Moving, blinking, scrolling, or auto updating can be user paused, stopped, or hidden',
+      title: 'Moving, blinking, scrolling or auto-updating can be user paused, stopped, or hidden',
       info: `
         <p>Check your site according to <a href="https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html">the specifications</a>.</p>
       `,
@@ -342,9 +342,9 @@ export const state = () => ({
     },
     {
       section: 'forms',
-      title: 'Server generated emails are working and the recipient’s are correct',
+      title: 'Server generated emails are working and the recipients are correct',
       info: `
-        <p>Verify server generated emails, like form notifications, are working.</p>
+        <p>Verify server-generated emails, like form notifications, are working.</p>
       `,
       checked: false,
     },
@@ -412,7 +412,7 @@ export const state = () => ({
     },
     {
       section: 'content',
-      title: 'Footer includes up-to-date copywrite',
+      title: 'Footer includes up-to-date Copyright',
       info: '',
       checked: false,
     },
@@ -428,7 +428,7 @@ export const state = () => ({
       section: 'postlaunch',
       title: 'Verify analytics',
       info: `
-        <p>Verifiy analytics are working AND going to the correct Google Analytics account.</p>
+        <p>Verify analytics are working AND going to the correct Google Analytics account.</p>
       `,
       checked: false,
     },
@@ -446,7 +446,7 @@ export const state = () => ({
     },
     {
       section: 'postlaunch',
-      title: 'Verify www and non - www are both working and one forwards to the other',
+      title: 'Verify www and non-www are both working and one forwards to the other',
       info: '',
       checked: false,
     },
@@ -454,7 +454,7 @@ export const state = () => ({
       section: 'postlaunch',
       title: 'Verify webfonts are loading',
       info: `
-        <p>User browserstack or another computer to test this. If the webfonts are failing, but you have the fonts installed on your computer, you won't notice the failure.</p>
+        <p>Use Browserstack or another computer to test this. If the webfonts are failing, but you have the fonts installed on your computer, you won't notice the failure.</p>
       `,
       checked: false,
     },
