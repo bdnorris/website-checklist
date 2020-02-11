@@ -82,6 +82,11 @@ export default {
       this.$store.dispatch('reset')
     }
   },
+  head () {
+    return {
+      title: 'Website Launch Checklist'
+    }
+  }
 }
 </script>
 
