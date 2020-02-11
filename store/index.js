@@ -341,6 +341,14 @@ export const state = () => ({
       checked: false,
     },
     {
+      section: 'javascript',
+      title: ' Required licenses have been acquired',
+      info: `
+        <p>If you've used a 3rd party plugin or library that requres a commercial license, make sure you're paid up and have the documentation saved in an appropriate place.</p>
+      `,
+      checked: false,
+    },
+    {
       section: 'forms',
       title: 'Server generated emails are working and the recipients are correct',
       info: `
