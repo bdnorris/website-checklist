@@ -4,7 +4,7 @@ export default ({ store }) => {
   window.onNuxtReady(() => {
     new VuexPersistence({
       /* your options */
-      reducer: state => ({ lists: state.lists })
+      // reducer: state => ({ lists: state.lists })
     }).plugin(store)
   })
 }
