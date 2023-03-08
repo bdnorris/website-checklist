@@ -51,9 +51,6 @@
     <ListGroup item-key="content">
       Content
     </ListGroup>
-    <ListGroup item-key="cms">
-      Content Management System
-    </ListGroup>
     <ListGroup item-key="postlaunch">
       Post Launch
     </ListGroup>

@@ -85,19 +85,11 @@ export const state = () => ({
     },
     {
       section: 'analytics',
-      title: 'Production Google Analytics filters Marlin IPs or has a View that filters these IPs',
-      info: `
-        <p>Filtering out Marlin Network IPs helps make sure data isn't polluted by testing. Reach out to the Analytics Team to verify this.</p>
-      `,
-      checked: false,
-    },
-    {
-      section: 'analytics',
       title: 'Site search set up in Google Analytics (if needed)',
       info: `
         <p>If your site uses a query parameter for search terms, you can easily connect this to Google Analytics.</p>
         <ul>
-          <li><a href="https://support.google.com/analytics/answer/1012264?hl=en">Set up Site Search</a></li>
+          <li><a href="https://www.optimizesmart.com/how-to-set-up-site-search-tracking-in-ga4/">Set up Site Search</a></li>
         </ul>
       `,
       checked: false,
@@ -146,8 +138,7 @@ export const state = () => ({
       info: `
         <p>Items found by these tools may not all be fixable, but make sure you run this test and identify places you can improve your site's performance.</p>
         <ul>
-          <li><a href="https://developers.google.com/speed/pagespeed/insights/">Google Pagespeed Insights</a></li>
-          <li><a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en">Google Lighthouse</a></li>
+          <li><a href="https://www.webpagetest.org/">Web Page Test</a></li>
         </ul>
       `,
       checked: false,
@@ -198,17 +189,9 @@ export const state = () => ({
     },
     {
       section: 'browsers',
-      title: 'Basic functions work in IE11, or IE issues are noted',
+      title: 'Your site works in a previous version of iOS and Android',
       info: `
-        <p>According to the scope of work, your site may need IE11 support, or not. Even if it doesn't, it's good to check basic functionality and layout, and then research any errors so you can estimate fixes if deemed necessary.</p>
-      `,
-      checked: false,
-    },
-    {
-      section: 'browsers',
-      title: 'Your site works in a previous version of iOS',
-      info: `
-        <p>Make sure your site works in the previous version of iOS's Safari browser.</p>
+        <p>Make sure your site works in the previous version of iOS's Safari browser and on the previous major version of Android in Chrome.</p>
       `,
       checked: false,
     },
@@ -247,7 +230,7 @@ export const state = () => ({
     },
     {
       section: 'accessibility',
-      title: 'All form fields have <label>’s associated',
+      title: 'All form fields have visible <label>’s associated',
       info: `
         <p>
           All form fields must have associated labels. 
@@ -342,9 +325,17 @@ export const state = () => ({
     },
     {
       section: 'javascript',
-      title: ' Required licenses have been acquired',
+      title: 'Required licenses have been acquired',
       info: `
         <p>If you've used a 3rd party plugin or library that requres a commercial license, make sure you're paid up and have the documentation saved in an appropriate place.</p>
+      `,
+      checked: false,
+    },
+    {
+      section: 'javascript',
+      title: 'Client-side API calls will work on the production domain',
+      info: `
+        <p>Determine if you'll have any CORS issues with any client side XHR requests.</p>
       `,
       checked: false,
     },
@@ -361,6 +352,22 @@ export const state = () => ({
       title: 'Form submissions can be tracked with analytics',
       info: `
         <p>Ideally, successful form submissions and errors can be tracked with analytics, alerting the analytics team to possible problems.</p>
+      `,
+      checked: false,
+    },
+    {
+      section: 'forms',
+      title: 'You have some kind of form validation',
+      info: `
+        <p>See above in accessibility, native validation is fine.</p>
+      `,
+      checked: false,
+    },
+    {
+      section: 'forms',
+      title: 'You have implemented some kind of spam prevention',
+      info: `
+        <p>You have implemented ReCaptcha or something like it, and it will work in the production domain</p>
       `,
       checked: false,
     },
@@ -463,14 +470,6 @@ export const state = () => ({
       title: 'Verify webfonts are loading',
       info: `
         <p>Use Browserstack or another computer to test this. If the webfonts are failing, but you have the fonts installed on your computer, you won't notice the failure.</p>
-      `,
-      checked: false,
-    },
-    {
-      section: 'cms',
-      title: 'The CMS login is hidden in production',
-      info: `
-        <p>Ideally, you either can't get to the production admin, or it's at least not called "admin" or "wp-admin".</p>
       `,
       checked: false,
     },
