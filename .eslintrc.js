@@ -21,6 +21,7 @@ module.exports = {
         functions: 'never',
       },
     ],
-    'vue/no-v-html': 'off'
+    'vue/no-v-html': 'off',
+    'vue/comment-directive': 'off'
   },
 }
